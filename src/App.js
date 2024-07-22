@@ -1,6 +1,7 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.scss";
 import { useEffect, useState } from "react";
+import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   // Funzione che cambia il tema chiaro/scuro in base a quello impostato dal dispositivo
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <div className={isDarkMode ? "dark-mode" : "light-mode"}>
-      <h1>Ciao</h1>
+      <Navbar />
+      <Footer />
     </div>
   );
 }
