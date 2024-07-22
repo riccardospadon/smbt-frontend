@@ -46,7 +46,7 @@ function App() {
 
     const handleLike = async (id) => {
       try{
-        const response = await axios.post(`/api/tweets/${id}/like`)
+        const response = await axios.post(`http://localhost:3050/api/tweets/${id}/like`)
         setTweets(tweets.map(tweet => tweet.id === id ? response.data : tweet))
       } catch (err) {
         console.error("Errore nell'aggiunta del like:", err)
