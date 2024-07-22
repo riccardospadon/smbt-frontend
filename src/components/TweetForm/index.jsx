@@ -28,14 +28,26 @@ export default function TweetForm({ addTweet }) {
       <Row>
         <Form onSubmit={handleSubmit}>
           <FloatingLabel
-            controlId="floatingTextarea"
+            value={username}
+            label="Username"
+            className="mb-3"
+            onChange={(event) => setUsername(event.target.value)}
+            required
+          >
+            <Form.Control as="textarea" placeholder="Username" />
+          </FloatingLabel>
+
+          <FloatingLabel
+            value={text}
             label="Tweet"
             className="mb-3"
+            onChange={(event) => setText(event.target.value)}
+            required
           >
             <Form.Control as="textarea" placeholder="Scrivi un tweet" />
           </FloatingLabel>
           <Button variant="primary" type="submit">
-            Primary
+            Tweet
           </Button>
         </Form>
       </Row>
