@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Form, FloatingLabel } from "react-bootstrap";
+import { Form, FloatingLabel, Button, Container, Row } from "react-bootstrap";
 
 export default function TweetForm({ addTweet }) {
   const [text, setText] = useState(""); // All'inizio non avrò alcun testo, per cui setto useState vuoto
@@ -24,16 +24,21 @@ export default function TweetForm({ addTweet }) {
 
   // Quello che vedremo sulla pagina...
   return (
-    <>
-      <Form>
-        <FloatingLabel
-          controlId="floatingTextarea"
-          label="Comments"
-          className="mb-3"
-        >
-          <Form.Control as="textarea" placeholder="Leave a comment here" />
-        </FloatingLabel>
-      </Form>
-    </>
+    <Container>
+      <Row>
+        <Form onSubmit={handleSubmit}>
+          <FloatingLabel
+            controlId="floatingTextarea"
+            label="Tweet"
+            className="mb-3"
+          >
+            <Form.Control as="textarea" placeholder="Scrivi un tweet" />
+          </FloatingLabel>
+          <Button variant="primary" type="submit">
+            Primary
+          </Button>
+        </Form>
+      </Row>
+    </Container>
   );
 }
