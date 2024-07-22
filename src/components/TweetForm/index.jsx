@@ -12,7 +12,7 @@ export default function TweetForm({ addTweet }) {
       // metodo POST per aggiungere un tweet tramite il form
       const response = await axios.post("http://localhost:3050/api/tweets", {
         text,
-        username,
+        username
       });
       addTweet(response.data);
       setText("");
@@ -32,9 +32,10 @@ export default function TweetForm({ addTweet }) {
             label="Username"
             className="mb-3"
             onChange={(event) => setUsername(event.target.value)}
+            style={{ color: 'black' }}
             required
           >
-            <Form.Control as="textarea" placeholder="Username" />
+            <Form.Control as="textarea" placeholder="Inserisci il tuo username" />
           </FloatingLabel>
 
           <FloatingLabel
@@ -42,6 +43,7 @@ export default function TweetForm({ addTweet }) {
             label="Tweet"
             className="mb-3"
             onChange={(event) => setText(event.target.value)}
+            style={{ color: 'black' }}
             required
           >
             <Form.Control as="textarea" placeholder="Scrivi un tweet" />
