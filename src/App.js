@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const fetchTweets = async () => {
       try {
-        const response = await axios.get('api/tweets')
+        const response = await axios.get('http://localhost:3050/api/tweets')
         setTweets(response.data)
       } catch (err) {
         console.error('Errore nel recupero del tweet:', err)
