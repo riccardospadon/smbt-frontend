@@ -2,6 +2,7 @@ import { Button } from "bootstrap"
 import { Heart, HeartFill } from "react-bootstrap-icons"
 import cn from 'classnames'
 import styles from './style.module.scss'
+import { useState } from "react"
 
 export default function SingleTweet ({ tweet, like }) {
 
