@@ -2,6 +2,7 @@ import "./App.scss";
 import { useEffect, useState } from "react";
 import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
+import TweetForm from "./components/TweetForm";
 
 function App() {
   // Funzione che cambia il tema chiaro/scuro in base a quello impostato dal dispositivo
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className={isDarkMode ? "dark-mode" : "light-mode"}>
       <Navbar />
+      <TweetForm addTweet={handleAddTweet} />
       <Footer />
     </div>
   );
