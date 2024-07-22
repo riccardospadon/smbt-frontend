@@ -1,0 +1,16 @@
+.tweet {
+    display: flex;
+    align-items: center;
+}
+
+.tweet span {
+    margin-left: 5px;
+}
+
+.buttonLike {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 5px;
+}
